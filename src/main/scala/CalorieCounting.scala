@@ -5,4 +5,4 @@ object CalorieCounting extends AOCSolution[Int, Int](1) {
   protected val SecondPartAnswer = calories.takeRight(3).sum
 }
 
-@main def main() = CalorieCounting.printAnswers()
+@main def Day1() = CalorieCounting.printAnswers()
