@@ -1,6 +1,6 @@
 import scala.reflect.ClassTag
 
-abstract class AOCSolution[FPT, SPT](day: Integer) {
+abstract class AOCSolution[FPT, SPT](day: Int) {
   protected lazy val inputSource = io.Source.fromFile(s"inputs/day$day.txt")
   protected lazy val inputString = inputSource.mkString
   protected def inputLines[T](mapper: String => T = identity[String]) = inputSource.getLines().map(mapper).toSeq
