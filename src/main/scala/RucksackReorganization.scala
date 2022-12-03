@@ -20,7 +20,7 @@ object RucksackReorganization extends AOCSolution[Int, Int](3) {
   protected val FirstPartAnswer: Int = rucksacks.map(_.bothCompartmentType).sum
   protected val SecondPartAnswer: Int = rucksacks
     .grouped(3)
-    .map(group => group.map(_.contentTypes).fold(Set.range(0, 53)) { case (l, r) => l.intersect(r) }.head)
+    .map(group => group.map(_.contentTypes).reduce { case (l, r) => l.intersect(r) }.head)
     .sum
 }
 
